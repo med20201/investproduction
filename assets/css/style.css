@@ -212,7 +212,7 @@ p { margin-bottom: 1rem; }
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem;
   list-style: none;
 }
 
@@ -222,6 +222,8 @@ p { margin-bottom: 1rem; }
   color: var(--text-muted);
   position: relative;
   padding: 0.5rem 0;
+  white-space: nowrap !important;
+
 }
 
 .nav-menu a::after {
