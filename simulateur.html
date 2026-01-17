@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur Site - INVEST PRODUCTION</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .simulator-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .simulator-header {
+            background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .simulator-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .device-selector {
+            display: flex;
+            gap: 10px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        
+        .device-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .device-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .device-btn.active {
+            background: white;
+            color: #7B3FF2;
+            font-weight: 600;
+        }
+        
+        .simulator-body {
+            padding: 30px;
+            background: #e8e8e8;
+            min-height: 600px;
+        }
+        
+        .iframe-container {
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .iframe-container.desktop {
+            width: 100%;
+            height: 800px;
+        }
+        
+        .iframe-container.tablet {
+            width: 768px;
+            height: 1024px;
+        }
+        
+        .iframe-container.mobile {
+            width: 375px;
+            height: 667px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .page-selector {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            padding: 10px 20px;
+            border: 2px solid #7B3FF2;
+            background: white;
+            color: #7B3FF2;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .page-btn:hover {
+            background: #7B3FF2;
+            color: white;
+        }
+        
+        .page-btn.active {
+            background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+            color: white;
+            border-color: #E91E8C;
+        }
+        
+        .publish-btn {
+            padding: 12px 30px;
+            border: none;
+            background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(123, 63, 242, 0.3);
+        }
+        
+        .publish-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(123, 63, 242, 0.4);
+        }
+        
+        .info-bar {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid #ffeaa7;
+        }
+        
+        .info-bar strong {
+            color: #7B3FF2;
+        }
+    </style>
+</head>
+<body>
+    <div class="simulator-container">
+        <div class="simulator-header">
+            <h1>🖥️ Simulateur Site Web - INVEST PRODUCTION</h1>
+            <div class="device-selector">
+                <button class="device-btn active" onclick="changeDevice('desktop')">💻 Desktop</button>
+                <button class="device-btn" onclick="changeDevice('tablet')">📱 Tablet</button>
+                <button class="device-btn" onclick="changeDevice('mobile')">📱 Mobile</button>
+            </div>
+        </div>
+        
+        <div class="info-bar">
+            ℹ️ Vous visualisez votre site en <strong>mode simulation</strong>. Naviguez entre les pages et testez les différents appareils avant de publier !
+        </div>
+        
+        <div class="simulator-body">
+            <div class="iframe-container desktop" id="iframeContainer">
+                <iframe id="siteFrame" src="index.html"></iframe>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="page-selector">
+                <button class="page-btn active" onclick="changePage('index.html')">🏠 Accueil</button>
+                <button class="page-btn" onclick="changePage('a-propos.html')">ℹ️ À propos</button>
+                <button class="page-btn" onclick="changePage('services.html')">⚙️ Services</button>
+                <button class="page-btn" onclick="changePage('moyens-equipes.html')">🚛 Moyens & Équipes</button>
+                <button class="page-btn" onclick="changePage('references.html')">⭐ Références</button>
+                <button class="page-btn" onclick="changePage('contact.html')">📞 Contact</button>
+                <button class="page-btn" onclick="changePage('en/index.html')">🇬🇧 English</button>
+                <button class="page-btn" onclick="changePage('ar/index.html')">🇦🇪 العربية</button>
+            </div>
+            
+            <button class="publish-btn" onclick="alert('Pour publier votre site, cliquez sur l\\'onglet PUBLIER en haut de l\\'écran !')">
+                🚀 Publier le Site
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        function changeDevice(device) {
+            const container = document.getElementById('iframeContainer');
+            const buttons = document.querySelectorAll('.device-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Change container class
+            container.className = 'iframe-container ' + device;
+        }
+        
+        function changePage(page) {
+            const iframe = document.getElementById('siteFrame');
+            const buttons = document.querySelectorAll('.page-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Change iframe source
+            iframe.src = page;
+        }
+    </script>
+</body>
+</html>

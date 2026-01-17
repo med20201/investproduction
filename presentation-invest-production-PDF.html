@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Présentation INVEST PRODUCTION - PDF Ready</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background: white;
+    }
+    
+    .page {
+      width: 297mm;
+      height: 210mm;
+      page-break-after: always;
+      position: relative;
+      background: linear-gradient(135deg, #0B0D17 0%, #1a1d2e 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+    
+    .page:last-child {
+      page-break-after: auto;
+    }
+    
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .page-number {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 16px;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    h1 {
+      font-size: 56px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: 42px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      font-size: 24px;
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+    }
+    
+    .content {
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 900px;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(123, 63, 242, 0.5);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 56px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    
+    .stat-label {
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+    
+    .client-card {
+      background: white;
+      color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    ul {
+      list-style: none;
+      font-size: 18px;
+      line-height: 2;
+    }
+    
+    ul li:before {
+      content: "✅ ";
+      margin-right: 10px;
+    }
+    
+    .service-section {
+      margin-bottom: 25px;
+      text-align: left;
+      width: 100%;
+      max-width: 850px;
+    }
+    
+    .service-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #7B3FF2;
+      margin-bottom: 10px;
+    }
+    
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+    
+    .reason-card {
+      background: rgba(255,255,255,0.05);
+      border-left: 4px solid #7B3FF2;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .reason-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .reason-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+    }
+    
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE 1 : Couverture -->
+<div class="page">
+  <h1>
+    <span class="gradient-text">INVEST PRODUCTION</span><br>
+    S.A.R.L
+  </h1>
+  <p class="subtitle" style="font-size: 28px;">
+    Votre partenaire transport, logistique & BTP au Maroc
+  </p>
+  <p class="subtitle" style="font-size: 22px; margin-top: 40px;">
+    Leader depuis 2017 | Disponible 24/7
+  </p>
+  <div class="page-number">1 / 15</div>
+</div>
+
+<!-- PAGE 2 : Qui sommes-nous -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>Qui sommes-nous ?</h2>
+  <div class="content" style="text-align: center;">
+    <p style="font-size: 24px; margin-bottom: 30px;">
+      <strong>🏢 INVEST PRODUCTION S.A.R.L</strong>
+    </p>
+    <p style="font-size: 20px; margin-bottom: 30px; color: rgba(255,255,255,0.9);">
+      Créée en 2017 par Saad HASSANI<br>
+      Leader en transport routier, logistique et BTP au Maroc
+    </p>
+    <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+      <li>Spécialistes du transport de marchandises et agrégats</li>
+      <li>Partenaire privilégié des grands groupes BTP</li>
+      <li>Disponibilité 24h/24 – 7j/7 toute l'année</li>
+      <li>Présence à Fès et Casablanca</li>
+    </ul>
+    <p style="font-size: 24px; margin-top: 40px; color: #7B3FF2;">
+      <strong>Capital social : 5 000 000 DHS</strong>
+    </p>
+  </div>
+  <div class="page-number">2 / 15</div>
+</div>
+
+<!-- PAGE 3 : Chiffres clés -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>Nos chiffres clés</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value">20</div>
+      <div class="stat-label">Tracteurs<br>Mercedes 40T</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">30</div>
+      <div class="stat-label">Bennes<br>30m³ HARDOX</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">42</div>
+      <div class="stat-label">Collaborateurs<br>Qualifiés</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">24/7</div>
+      <div class="stat-label">Disponibilité<br>7 jours/7</div>
+    </div>
+  </div>
+  <div class="page-number">3 / 15</div>
+</div>
+
+<!-- PAGE 4 : Notre flotte -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>Notre flotte moderne</h2>
+  <div class="content" style="text-align: left; max-width: 900px;">
+    <div style="margin-bottom: 30px;">
+      <h3 style="font-size: 28px; margin-bottom: 15px;">🚛 20 TRACTEURS MERCEDES ACTROS 40T</h3>
+      <ul style="font-size: 17px;">
+        <li>Modèles 2021-2024</li>
+        <li>Maintenance préventive rigoureuse</li>
+        <li>GPS et suivi en temps réel</li>
+        <li>Conformité normes environnementales</li>
+      </ul>
+    </div>
+    <div style="margin-bottom: 30px;">
+      <h3 style="font-size: 28px; margin-bottom: 15px;">🚜 30 SEMI-REMORQUES BENNES 30m³</h3>
+      <ul style="font-size: 17px;">
+        <li>Acier HARDOX haute résistance</li>
+        <li>Agrégats, sable, gravier, enrobés</li>
+        <li>Entretien régulier et parfait état</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size: 28px; margin-bottom: 15px;">⚙️ ENGINS DE CHANTIER</h3>
+      <ul style="font-size: 17px;">
+        <li>Pelles hydrauliques, Bulldozers, Compacteurs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-number">4 / 15</div>
+</div>
+
+<!-- PAGE 5-11 : Services (version condensée pour PDF) -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>Nos 7 Services</h2>
+  <div class="content" style="text-align: left; max-width: 950px; font-size: 16px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">🚛 Transport Marchandises</h3>
+        <p>Livraison nationale • Suivi GPS • Délais respectés</p>
+      </div>
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">🏗️ Transport Agrégats</h3>
+        <p>Sable, gravier, concassé • Livraison 24/7 • Traçabilité</p>
+      </div>
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">🛣️ Transport Enrobés</h3>
+        <p>Chantiers routiers • Respect températures • Cadences</p>
+      </div>
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">⚒️ Terrassement</h3>
+        <p>Excavation • Nivellement • Compactage • Études sol</p>
+      </div>
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">🚜 Location d'Engins</h3>
+        <p>Pelles, bulldozers • Avec/sans opérateur • Maintenance</p>
+      </div>
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">🏭 Négoce Matériaux</h3>
+        <p>Agrégats certifiés • Prix compétitifs • Livraison rapide</p>
+      </div>
+      <div>
+        <h3 style="color: #7B3FF2; font-size: 20px; margin-bottom: 10px;">🔨 Travaux Divers BTP</h3>
+        <p>VRD • Aménagements • Démolition • Assainissement</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-number">5 / 15</div>
+</div>
+
+<!-- PAGE 12 : Nos Références -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>La confiance des <span class="gradient-text">leaders du BTP</span></h2>
+  <p class="subtitle">Ils nous font confiance pour leurs projets au Maroc</p>
+  <div class="clients-grid">
+    <div class="client-card">HOLCIM<br>BÉTON</div>
+    <div class="client-card">LAFARGE<br>BÉTON</div>
+    <div class="client-card">NGE<br>(GRP)</div>
+    <div class="client-card">CIMENTS<br>DU MAROC</div>
+    <div class="client-card">GCR<br>(Groupe Chaâbi)</div>
+    <div class="client-card">SOTRAVO</div>
+    <div class="client-card">DOĞUŞ<br>İNŞAAT</div>
+    <div class="client-card">GTR</div>
+    <div class="client-card">COLAS</div>
+    <div class="client-card">EBER</div>
+    <div class="client-card">SNL<br>TRAVAUX</div>
+    <div class="client-card" style="border: 2px dashed #999;">+ AUTRES</div>
+  </div>
+  <div class="page-number">6 / 15</div>
+</div>
+
+<!-- PAGE 13 : Pourquoi nous choisir -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>Pourquoi choisir <span class="gradient-text">INVEST PRODUCTION</span> ?</h2>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <h3>💪 CAPACITÉ OPÉRATIONNELLE</h3>
+      <p>Flotte de 20 tracteurs + 30 bennes pour absorber vos volumes</p>
+    </div>
+    <div class="reason-card">
+      <h3>⚡ RÉACTIVITÉ 24/7</h3>
+      <p>Disponibles jour et nuit, week-ends et jours fériés compris</p>
+    </div>
+    <div class="reason-card">
+      <h3>🛡️ FIABILITÉ ÉPROUVÉE</h3>
+      <p>Références clients : Holcim, Lafarge, NGE, COLAS...</p>
+    </div>
+    <div class="reason-card">
+      <h3>👷 EXPERTISE TERRAIN</h3>
+      <p>42 collaborateurs expérimentés, connaissance des réalités chantier</p>
+    </div>
+    <div class="reason-card">
+      <h3>📍 PRÉSENCE LOCALE</h3>
+      <p>Implantés à Fès et Casablanca pour vous servir rapidement</p>
+    </div>
+    <div class="reason-card">
+      <h3>💼 ENGAGEMENT QUALITÉ</h3>
+      <p>Respect des délais, traçabilité, assurance tous risques</p>
+    </div>
+  </div>
+  <div class="page-number">7 / 15</div>
+</div>
+
+<!-- PAGE 14 : Contactez-nous -->
+<div class="page">
+  <div class="logo">IP</div>
+  <h2>Contactez-nous</h2>
+  <div class="content" style="text-align: center; font-size: 20px; line-height: 2;">
+    <p style="margin-bottom: 25px;">
+      📍 <strong>SIÈGE FÈS</strong><br>
+      Magasin 4, Lot 62, Berdellah 2 • Ain Smen – Fès
+    </p>
+    <p style="margin-bottom: 25px;">
+      📍 <strong>BUREAU CASABLANCA</strong><br>
+      J1 Office Center, Étage 5, Bureau n°506 • Ain Sebaa
+    </p>
+    <p style="margin-bottom: 25px;">
+      📞 <strong>TÉLÉPHONE</strong><br>
+      05 22 24 97 15 / 06 10 73 11 00
+    </p>
+    <p style="margin-bottom: 25px;">
+      ✉️ <strong>EMAIL</strong><br>
+      investproduction2017@gmail.com
+    </p>
+    <p style="margin-bottom: 25px;">
+      🌐 <strong>SITE WEB</strong><br>
+      www.investproduction.ma
+    </p>
+    <p style="font-size: 24px; color: #7B3FF2;">
+      <strong>⏰ Disponibilité 24h/24 – 7j/7</strong>
+    </p>
+  </div>
+  <div class="page-number">8 / 15</div>
+</div>
+
+<!-- PAGE 15 : Merci -->
+<div class="page">
+  <h1 style="font-size: 48px;">Merci de votre attention</h1>
+  <h2 class="gradient-text" style="font-size: 52px;">INVEST PRODUCTION S.A.R.L</h2>
+  <div class="content" style="text-align: center; font-size: 22px; margin-top: 40px;">
+    <p style="margin-bottom: 15px;">📞 05 22 24 97 15 / 06 10 73 11 00</p>
+    <p style="margin-bottom: 15px;">✉️ investproduction2017@gmail.com</p>
+    <p style="margin-bottom: 15px;">🌐 www.investproduction.ma</p>
+  </div>
+  <p style="font-size: 22px; margin-top: 50px; color: rgba(255,255,255,0.7); text-align: center;">
+    Disponibles 24h/24 – 7j/7<br>
+    pour répondre à vos besoins
+  </p>
+  <div class="page-number">9 / 15</div>
+</div>
+
+</body>
+</html>

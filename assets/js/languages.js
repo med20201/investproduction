@@ -104,20 +104,17 @@ function initLanguageSelector() {
   // Application de la direction
   applyDirection();
   
-  // Insertion du sélecteur dans le header (après le logo)
+  // Insertion du sélecteur dans le header (après le nav)
   const header = document.querySelector('.header-container');
   if (!header) return;
   
   // Création d'un conteneur pour le sélecteur
   const langContainer = document.createElement('div');
   langContainer.innerHTML = createLanguageSelector();
-  langContainer.style.cssText = 'margin-left: auto; margin-right: 1rem;';
+  langContainer.style.cssText = 'margin-left: auto;';
   
-  // Insertion avant le nav
-  const nav = header.querySelector('nav');
-  if (nav) {
-    header.insertBefore(langContainer.firstElementChild, nav);
-  }
+  // Insertion après le nav (à la fin du header)
+  header.appendChild(langContainer.firstElementChild);
   
   // Gestion du dropdown
   const langButton = document.getElementById('langButton');

@@ -4,18 +4,18 @@
    ============================ */
 
 :root {
-  /* Palette brand (logo violet-rose) */
+  /* Palette brand (violet-rose plus doux) */
   --brand-primary: #7B3FF2;
   --brand-secondary: #E91E8C;
   --brand-gradient: linear-gradient(135deg, #7B3FF2 0%, #E91E8C 100%);
   
-  /* Couleurs principales */
-  --bg-dark: #0B0D17;
-  --bg-card: #141824;
-  --text-light: #FFFFFF;
-  --text-muted: #B4B8D0;
-  --border-subtle: rgba(255,255,255,.08);
-  --shadow-strong: 0 20px 60px rgba(0,0,0,.4);
+  /* Couleurs principales - Thème CLAIR */
+  --bg-dark: #F8F9FA;
+  --bg-card: #FFFFFF;
+  --text-light: #1A202C;
+  --text-muted: #4A5568;
+  --border-subtle: rgba(0,0,0,.08);
+  --shadow-strong: 0 10px 40px rgba(0,0,0,.08);
   
   /* Typographie */
   --font-primary: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -50,7 +50,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-light);
-  background: radial-gradient(1400px 800px at 30% 0%, #1A1E3E 0%, transparent 70%), var(--bg-dark);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F2F5 100%);
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -156,9 +156,10 @@ p { margin-bottom: 1rem; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(11, 13, 23, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
   transition: var(--transition);
 }
 
@@ -302,7 +303,7 @@ p { margin-bottom: 1rem; }
 .btn-primary {
   background: var(--brand-gradient);
   border-color: transparent;
-  color: var(--text-light);
+  color: #FFFFFF;
   box-shadow: 0 8px 24px rgba(123, 63, 242, 0.3);
 }
 
@@ -312,14 +313,14 @@ p { margin-bottom: 1rem; }
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--border-subtle);
-  color: var(--text-light);
+  background: rgba(123, 63, 242, 0.08);
+  border-color: rgba(123, 63, 242, 0.2);
+  color: var(--brand-primary);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(123, 63, 242, 0.15);
+  border-color: rgba(123, 63, 242, 0.3);
 }
 
 .btn-ghost {
@@ -344,13 +345,14 @@ p { margin-bottom: 1rem; }
    CARDS
    ============================ */
 .card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
   padding: clamp(20px, 4vw, 32px);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card::before {
@@ -371,8 +373,8 @@ p { margin-bottom: 1rem; }
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: var(--shadow-strong);
+  border-color: rgba(123, 63, 242, 0.3);
+  box-shadow: 0 12px 40px rgba(123, 63, 242, 0.15);
   transform: translateY(-4px);
 }
 
@@ -407,6 +409,16 @@ p { margin-bottom: 1rem; }
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(240, 242, 245, 0.92) 50%,
+    rgba(255, 255, 255, 0.90) 100%
+  ), url('https://www.genspark.ai/api/files/s/ad6ExBjX');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero::before {
@@ -693,6 +705,7 @@ select.form-control {
    FOOTER
    ============================ */
 .footer {
+  background: linear-gradient(180deg, rgba(123, 63, 242, 0.02) 0%, rgba(255,255,255,0) 100%);
   border-top: 1px solid var(--border-subtle);
   padding: 3rem 0 2rem;
   margin-top: 4rem;

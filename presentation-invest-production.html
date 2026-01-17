@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation INVEST PRODUCTION S.A.R.L</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #000;
+      color: white;
+      overflow: hidden;
+    }
+    
+    .presentation {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+      padding: 4rem;
+      background: linear-gradient(135deg, #0B0D17 0%, #1a1d2e 100%);
+      position: relative;
+      overflow-y: auto;
+    }
+    
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .slide-number {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .logo {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+    
+    .baseline {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .content {
+      max-width: 1000px;
+      text-align: left;
+    }
+    
+    .content ul {
+      list-style: none;
+      font-size: 1.25rem;
+      line-height: 2;
+    }
+    
+    .content ul li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+    
+    .content ul li:before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(123, 63, 242, 0.3);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .service-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .service-card .section {
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-card .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #7B3FF2;
+      margin-bottom: 0.5rem;
+    }
+    
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .client-card {
+      background: white;
+      color: #333;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    
+    .contact-info {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+    
+    .contact-info strong {
+      color: #7B3FF2;
+    }
+    
+    .navigation {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    
+    .nav-btn {
+      background: linear-gradient(135deg, #7B3FF2, #E91E8C);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1200px;
+    }
+    
+    .reason-card {
+      background: rgba(255,255,255,0.05);
+      border-left: 4px solid #7B3FF2;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    
+    .reason-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .reason-card p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.7);
+    }
+  </style>
+</head>
+<body>
+
+<div class="presentation">
+  
+  <!-- SLIDE 1 : Couverture -->
+  <div class="slide active">
+    <h1>
+      <span class="gradient-text">INVEST PRODUCTION</span><br>
+      S.A.R.L
+    </h1>
+    <p class="subtitle">
+      Votre partenaire transport, logistique & BTP au Maroc
+    </p>
+    <p class="baseline">
+      Leader depuis 2017 | Disponible 24/7
+    </p>
+    <div class="slide-number">1 / 15</div>
+  </div>
+  
+  <!-- SLIDE 2 : Qui sommes-nous -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>Qui sommes-nous ?</h2>
+    <div class="content">
+      <p style="font-size: 1.5rem; text-align: center; margin-bottom: 2rem;">
+        🏢 <strong>INVEST PRODUCTION S.A.R.L</strong>
+      </p>
+      <p style="font-size: 1.25rem; text-align: center; margin-bottom: 2rem; color: rgba(255,255,255,0.8);">
+        Créée en 2017 par Saad HASSANI<br>
+        Leader en transport routier, logistique et BTP au Maroc
+      </p>
+      <ul>
+        <li>Spécialistes du transport de marchandises et agrégats</li>
+        <li>Partenaire privilégié des grands groupes BTP</li>
+        <li>Disponibilité 24h/24 – 7j/7 toute l'année</li>
+        <li>Présence à Fès et Casablanca</li>
+      </ul>
+      <p style="font-size: 1.5rem; text-align: center; margin-top: 2rem; color: #7B3FF2;">
+        <strong>Capital social : 5 000 000 DHS</strong>
+      </p>
+    </div>
+    <div class="slide-number">2 / 15</div>
+  </div>
+  
+  <!-- SLIDE 3 : Chiffres clés -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>Nos chiffres clés</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">20</div>
+        <div class="stat-label">Tracteurs Mercedes 40T</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">30</div>
+        <div class="stat-label">Bennes 30m³ HARDOX</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">42</div>
+        <div class="stat-label">Collaborateurs Qualifiés</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">24/7</div>
+        <div class="stat-label">Disponibilité 7j/7</div>
+      </div>
+    </div>
+    <div class="slide-number">3 / 15</div>
+  </div>
+  
+  <!-- SLIDE 4 : Notre flotte -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>Notre flotte moderne</h2>
+    <div class="content">
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem;">🚛 20 TRACTEURS MERCEDES ACTROS 40 TONNES</h3>
+        <ul style="font-size: 1.125rem;">
+          <li>Modèles 2021-2024</li>
+          <li>Maintenance préventive rigoureuse</li>
+          <li>GPS et suivi en temps réel</li>
+          <li>Conformité normes environnementales</li>
+        </ul>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem;">🚜 30 SEMI-REMORQUES BENNES 30m³</h3>
+        <ul style="font-size: 1.125rem;">
+          <li>Acier HARDOX haute résistance</li>
+          <li>Agrégats, sable, gravier, enrobés</li>
+          <li>Entretien régulier</li>
+          <li>Parfait état</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size: 2rem; margin-bottom: 1rem;">⚙️ ENGINS DE CHANTIER</h3>
+        <ul style="font-size: 1.125rem;">
+          <li>Pelles hydrauliques</li>
+          <li>Bulldozers</li>
+          <li>Compacteurs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-number">4 / 15</div>
+  </div>
+  
+  <!-- SLIDE 5 : Transport Marchandises -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>🚛 Transport de Marchandises</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Transport de marchandises générales sur l'ensemble du territoire marocain
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">POUR QUI ?</div>
+        <p style="font-size: 1.125rem;">
+          • Industriels<br>
+          • Distributeurs<br>
+          • Entreprises BTP<br>
+          • Commerce de gros
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Flotte moderne et entretenue<br>
+          ✅ Suivi GPS en temps réel<br>
+          ✅ Livraison dans les délais<br>
+          ✅ Assurance tous risques
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">5 / 15</div>
+  </div>
+  
+  <!-- SLIDE 6 : Transport Agrégats -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>🏗️ Transport d'Agrégats</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Approvisionnement chantier en agrégats : sable, gravier, tout-venant, concassé
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">POUR QUI ?</div>
+        <p style="font-size: 1.125rem;">
+          • Centrales à béton<br>
+          • Chantiers BTP<br>
+          • Carrières<br>
+          • Entreprises de construction
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Livraison 24h/24 – 7j/7<br>
+          ✅ Respect des cadences chantier<br>
+          ✅ Traçabilité complète<br>
+          ✅ Équipe expérimentée
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">6 / 15</div>
+  </div>
+  
+  <!-- SLIDE 7 : Transport Enrobés -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>🛣️ Transport d'Enrobés</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Spécialistes du transport d'enrobés pour chantiers routiers et autoroutiers
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">POUR QUI ?</div>
+        <p style="font-size: 1.125rem;">
+          • Entreprises de travaux routiers<br>
+          • Autoroutes du Maroc<br>
+          • Sociétés d'enrobés<br>
+          • Maîtres d'ouvrage publics
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Respect des températures<br>
+          ✅ Respect des cadences<br>
+          ✅ Disponibilité immédiate<br>
+          ✅ Références : ADM, COLAS, NGE
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">7 / 15</div>
+  </div>
+  
+  <!-- SLIDE 8 : Terrassement -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>⚒️ Terrassement</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Travaux de terrassement : excavation, remblaiement, nivellement, compactage
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">POUR QUI ?</div>
+        <p style="font-size: 1.125rem;">
+          • Promoteurs immobiliers<br>
+          • Entreprises BTP<br>
+          • Collectivités locales<br>
+          • Industriels
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Engins modernes<br>
+          ✅ Équipes qualifiées<br>
+          ✅ Études de sol<br>
+          ✅ Respect des normes
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">8 / 15</div>
+  </div>
+  
+  <!-- SLIDE 9 : Location d'Engins -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>🚜 Location d'Engins</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Location d'engins de chantier avec ou sans opérateur
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">CATALOGUE</div>
+        <p style="font-size: 1.125rem;">
+          • Pelles hydrauliques 15-30T<br>
+          • Bulldozers<br>
+          • Compacteurs<br>
+          • Chargeuses<br>
+          • Niveleuses
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Engins récents et entretenus<br>
+          ✅ Location courte et longue durée<br>
+          ✅ Opérateurs qualifiés disponibles<br>
+          ✅ Maintenance incluse
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">9 / 15</div>
+  </div>
+  
+  <!-- SLIDE 10 : Négoce Matériaux -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>🏭 Négoce de Matériaux</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Vente et livraison d'agrégats et matériaux de construction
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">PRODUITS</div>
+        <p style="font-size: 1.125rem;">
+          • Sable de tous types<br>
+          • Gravier 5/15, 15/25, 25/40<br>
+          • Tout-venant 0/40<br>
+          • Concassé<br>
+          • Terre végétale
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Prix compétitifs<br>
+          ✅ Livraison rapide<br>
+          ✅ Qualité certifiée<br>
+          ✅ Conseils techniques
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">10 / 15</div>
+  </div>
+  
+  <!-- SLIDE 11 : Travaux Divers BTP -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>🔨 Travaux Divers BTP</h2>
+    <div class="service-card">
+      <div class="section">
+        <div class="section-title">DESCRIPTION</div>
+        <p style="font-size: 1.125rem; line-height: 1.8;">
+          Réalisation de travaux divers sur chantiers BTP
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">PRESTATIONS</div>
+        <p style="font-size: 1.125rem;">
+          • Aménagements extérieurs<br>
+          • VRD (Voirie et Réseaux Divers)<br>
+          • Plateformes et accès chantier<br>
+          • Démolition<br>
+          • Assainissement
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">NOS ATOUTS</div>
+        <p style="font-size: 1.125rem;">
+          ✅ Équipes polyvalentes<br>
+          ✅ Matériel adapté<br>
+          ✅ Respect des délais<br>
+          ✅ Conformité réglementaire
+        </p>
+      </div>
+    </div>
+    <div class="slide-number">11 / 15</div>
+  </div>
+  
+  <!-- SLIDE 12 : Nos Références -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>La confiance des <span class="gradient-text">leaders du BTP</span></h2>
+    <p class="subtitle">Ils nous font confiance pour leurs projets au Maroc</p>
+    <div class="clients-grid">
+      <div class="client-card">HOLCIM<br>BÉTON</div>
+      <div class="client-card">LAFARGE<br>BÉTON</div>
+      <div class="client-card">NGE<br>(GRP)</div>
+      <div class="client-card">CIMENTS<br>DU MAROC</div>
+      <div class="client-card">GCR<br>(Groupe Chaâbi)</div>
+      <div class="client-card">SOTRAVO</div>
+      <div class="client-card">DOĞUŞ<br>İNŞAAT</div>
+      <div class="client-card">GTR</div>
+      <div class="client-card">COLAS</div>
+      <div class="client-card">EBER</div>
+      <div class="client-card">SNL<br>TRAVAUX</div>
+      <div class="client-card" style="border: 2px dashed #999;">+ AUTRES</div>
+    </div>
+    <div class="slide-number">12 / 15</div>
+  </div>
+  
+  <!-- SLIDE 13 : Pourquoi nous choisir -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>Pourquoi choisir <span class="gradient-text">INVEST PRODUCTION</span> ?</h2>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <h3>💪 CAPACITÉ OPÉRATIONNELLE</h3>
+        <p>Flotte de 20 tracteurs + 30 bennes pour absorber vos volumes</p>
+      </div>
+      <div class="reason-card">
+        <h3>⚡ RÉACTIVITÉ 24/7</h3>
+        <p>Disponibles jour et nuit, week-ends et jours fériés compris</p>
+      </div>
+      <div class="reason-card">
+        <h3>🛡️ FIABILITÉ ÉPROUVÉE</h3>
+        <p>Références clients : Holcim, Lafarge, NGE, COLAS...</p>
+      </div>
+      <div class="reason-card">
+        <h3>👷 EXPERTISE TERRAIN</h3>
+        <p>42 collaborateurs expérimentés, connaissance des réalités chantier</p>
+      </div>
+      <div class="reason-card">
+        <h3>📍 PRÉSENCE LOCALE</h3>
+        <p>Implantés à Fès et Casablanca pour vous servir rapidement</p>
+      </div>
+      <div class="reason-card">
+        <h3>💼 ENGAGEMENT QUALITÉ</h3>
+        <p>Respect des délais, traçabilité, assurance tous risques</p>
+      </div>
+    </div>
+    <div class="slide-number">13 / 15</div>
+  </div>
+  
+  <!-- SLIDE 14 : Contactez-nous -->
+  <div class="slide">
+    <div class="logo">IP</div>
+    <h2>Contactez-nous</h2>
+    <div class="contact-info">
+      <p style="margin-bottom: 2rem;">
+        📍 <strong>SIÈGE FÈS</strong><br>
+        Magasin 4, Lot 62, Berdellah 2<br>
+        Ain Smen – Fès
+      </p>
+      <p style="margin-bottom: 2rem;">
+        📍 <strong>BUREAU CASABLANCA</strong><br>
+        J1 Office Center, Étage 5, Bureau n°506<br>
+        Ain Sebaa, Casablanca
+      </p>
+      <p style="margin-bottom: 2rem;">
+        📞 <strong>TÉLÉPHONE</strong><br>
+        05 22 24 97 15 / 06 10 73 11 00
+      </p>
+      <p style="margin-bottom: 2rem;">
+        ✉️ <strong>EMAIL</strong><br>
+        investproduction2017@gmail.com
+      </p>
+      <p style="margin-bottom: 2rem;">
+        🌐 <strong>SITE WEB</strong><br>
+        www.investproduction.ma
+      </p>
+      <p style="font-size: 1.75rem;">
+        ⏰ <strong>Disponibilité 24h/24 – 7j/7</strong>
+      </p>
+    </div>
+    <div class="slide-number">14 / 15</div>
+  </div>
+  
+  <!-- SLIDE 15 : Merci -->
+  <div class="slide">
+    <h1 style="font-size: 3rem;">Merci de votre attention</h1>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">INVEST PRODUCTION S.A.R.L</h2>
+    <div class="contact-info" style="font-size: 1.75rem; margin-top: 3rem;">
+      <p>📞 05 22 24 97 15 / 06 10 73 11 00</p>
+      <p>✉️ investproduction2017@gmail.com</p>
+      <p>🌐 www.investproduction.ma</p>
+    </div>
+    <p style="font-size: 1.5rem; margin-top: 3rem; color: rgba(255,255,255,0.7);">
+      Disponibles 24h/24 – 7j/7<br>
+      pour répondre à vos besoins
+    </p>
+    <div class="slide-number">15 / 15</div>
+  </div>
+  
+</div>
+
+<!-- Navigation -->
+<div class="navigation">
+  <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">◀ Précédent</button>
+  <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Suivant ▶</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+    
+    // Update buttons
+    document.getElementById('prevBtn').disabled = currentSlide === 0;
+    document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+  }
+  
+  function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') changeSlide(-1);
+    if (e.key === 'ArrowRight') changeSlide(1);
+  });
+  
+  // Initialize
+  document.getElementById('prevBtn').disabled = true;
+</script>
+
+</body>
+</html>

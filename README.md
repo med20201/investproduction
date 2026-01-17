@@ -2,9 +2,25 @@
 
 ## 🚀 Présentation du projet
 
-Site web professionnel multi-pages pour **INVEST PRODUCTION S.A.R.L**, entreprise spécialisée en **transport routier, logistique et BTP au Maroc**.
+Site web professionnel **multi-pages et multilingue** pour **INVEST PRODUCTION S.A.R.L**, entreprise leader en **transport routier, logistique et BTP au Maroc**.
 
-**Style & Inspiration :** Design moderne inspiré de TGCC avec palette violet-rose (du logo), sobriété corporate, sections numérotées et mise en avant des références clients.
+**✅ STATUS : PRODUCTION-READY v4.0.0 FINAL**
+
+**Style & Inspiration :** Design moderne inspiré de TGCC avec palette violet-rose, sobriété corporate, sections numérotées et mise en avant des **11 références clients** avec logos SVG interactifs.
+
+### 🎯 Chiffres Clés
+- **10 pages HTML** (8 FR + 1 EN + 1 AR)
+- **13 logos clients SVG** intégrés
+- **3 langues** (Français / English / العربية)
+- **42 collaborateurs** | **20 tracteurs Mercedes 40T** | **30 bennes 30m³**
+- **Disponibilité 24h/24 - 7j/7**
+- **Capital social : 5 000 000 DHS**
+
+### 🖼️ Aperçus Visuels
+- 🌐 **Site web** : Voir `APERCUS-VISUELS.md`
+- 💼 **Carte de visite** : Design recto-verso professionnel
+- 📊 **Présentation PPT** : 15 slides HTML + PDF-ready
+- 📄 **Brochures** : 3 formats prêts à imprimer
 
 ---
 
@@ -14,34 +30,42 @@ Site web professionnel multi-pages pour **INVEST PRODUCTION S.A.R.L**, entrepris
 
 ```
 /
-├── index.html                    (Accueil : hero, services, chiffres clés, références)
+├── index.html                    (Accueil FR : hero, services, 11 logos clients)
 ├── a-propos.html                 (À propos : mission, vision, valeurs, organisation)
-├── services.html                 (Hub services : liste complète des prestations)
-├── moyens-equipes.html           (Moyens d'exploitation + organisation)
-├── references.html               (Clients majeurs : HOLCIM, LAFARGE, NGE...)
-├── contact.html                  (Formulaire devis + coordonnées + FAQ)
-├── mentions-legales.html         (Informations juridiques)
+├── services.html                 (Hub services : liste complète des 7 prestations)
+├── moyens-equipes.html           (Moyens d'exploitation + 5 photos + organigramme 42 pers)
+├── references.html               (Page dédiée 11 clients : HOLCIM, LAFARGE, NGE, COLAS...)
+├── contact.html                  (Formulaire devis + coordonnées Fès/Casa + FAQ)
+├── mentions-legales.html         (Informations juridiques complètes)
+├── plan-du-site.html             (Plan de navigation complet)
+│
+├── en/
+│   └── index.html                (Homepage English version)
+│
+├── ar/
+│   └── index.html                (الصفحة الرئيسية - RTL version arabe)
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css             (CSS partagé : palette brand, composants, responsive)
+│   │   ├── style.css             (CSS partagé : palette brand, composants, responsive)
+│   │   └── languages.css         (CSS multilingue + RTL)
+│   ├── js/
+│   │   └── languages.js          (Sélecteur de langue FR/EN/AR)
 │   ├── logo.svg                  (Logo officiel INVEST PRODUCTION)
-│   └── logos/
-│       ├── holcim-logo.svg       (Logo client Holcim)
-│       ├── lafarge-logo.svg      (Logo client Lafarge)
-│       ├── nge-logo.svg          (Logo client NGE)
-│       ├── cmb-logo.svg          (Logo client Ciments du Maroc)
-│       ├── omhg-logo.svg         (Logo ONCF/OMHG)
-│       └── autoroutes-logo.svg   (Logo Autoroutes du Maroc)
-│
-└── services/ (à créer - 7 sous-pages détaillées)
-    ├── transport-marchandises.html
-    ├── transport-agregats.html
-    ├── transport-enrobes.html
-    ├── terrassement.html
-    ├── location-engins.html
-    ├── negoce-materiaux.html
-    └── travaux-divers-btp.html
+│   └── logos/                    (13 logos clients SVG)
+│       ├── holcim-logo.svg       (Vert #00A651)
+│       ├── lafarge-logo.svg      (Rouge #E2001A)
+│       ├── nge-logo.svg          (Rouge #C41E3A)
+│       ├── cmb-logo.svg          (Bleu #0066A1)
+│       ├── gcr-logo.svg          (Bleu #003DA5)
+│       ├── sotravo-logo.svg      (Orange #FF6B00)
+│       ├── dogus-logo.svg        (Rouge #C41E3A)
+│       ├── gtr-logo.svg          (Bleu Marine #1E3A8A)
+│       ├── colas-logo.svg        (Rouge #E30613)
+│       ├── eber-logo.svg         (Vert #006838)
+│       ├── snl-logo.svg          (Bleu #0066A1)
+│       ├── omhg-logo.svg         (Bleu #0066A1)
+│       └── autoroutes-logo.svg   (Vert #00843D)
 ```
 
 ---
@@ -49,20 +73,21 @@ Site web professionnel multi-pages pour **INVEST PRODUCTION S.A.R.L**, entrepris
 ## 🎨 Identité visuelle
 
 ### Logo officiel intégré
-**✅ Logo SVG INVEST PRODUCTION** créé à partir du logo officiel :
-- **Truck icon** en gradient violet-rose (`#AE14A7` → `#FF69B4`)
-- **Letters "IP"** en blanc avec effet italique dynamique
-- **Texte "INVEST PRODUCTION"** en bas du logo
-- **Background** : bleu foncé (`#2B3B60`)
-- **Format** : SVG vectoriel responsive (`assets/logo.svg`)
+**✅ Logo moderne INVEST PRODUCTION** :
+- **Fichier** : `assets/logo-new.png` (nouveau logo fourni par le client)
+- **Texte "INVEST PRODUCTION"** à côté du logo sur les 10 pages
+- **Style** : Blanc, gras, lettres espacées (1.25rem)
+- **Position** : En haut à gauche du header
+- **Format** : PNG responsive avec texte d'accompagnement
 
-### Palette de couleurs (logo intégré)
+### Palette de couleurs (thème clair)
+- **Background :** `#FFFFFF` (Blanc)
+- **Cards :** `#FFFFFF` avec ombres subtiles
 - **Brand Primary :** `#7B3FF2` (Violet)
 - **Brand Secondary :** `#E91E8C` (Rose)
 - **Gradient :** `linear-gradient(135deg, #7B3FF2 0%, #E91E8C 100%)`
-- **Background :** `#0B0D17` (Sombre)
-- **Texte principal :** `#FFFFFF`
-- **Texte secondaire :** `#B4B8D0`
+- **Texte principal :** `#1A1A1A` (Gris foncé)
+- **Texte secondaire :** `#666666`
 
 ### Images réelles intégrées
 **✅ Photos professionnelles** extraites et intégrées :
