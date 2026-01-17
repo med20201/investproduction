@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr-MA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Contact & devis transport BTP Maroc | INVEST PRODUCTION S.A.R.L</title>
+  <meta name="description" content="Demandez un devis transport/logistique au Maroc. Siège Fès, bureau Casablanca. Réponse rapide. Téléphone, email et formulaire de contact.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="INVEST PRODUCTION S.A.R.L" style="height: 60px; width: auto;">
+        </a>
+        
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="moyens-equipes.html">Moyens & Équipes</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html" class="btn btn-primary active">Demander un devis</a></li>
+          </ul>
+          
+          <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu mobile">
+            ☰
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero section" style="min-height: 40vh;">
+    <div class="container">
+      <div class="text-center fade-in-up">
+        <div class="section-label" style="justify-content: center;">
+          <span>Contactez-nous</span>
+        </div>
+        <h1 class="hero-title">
+          Demandez un <span class="text-gradient">devis ou planifiez</span> un échange
+        </h1>
+        <p class="hero-subtitle" style="max-width: 900px; margin: 0 auto;">
+          Vous avez un chantier, un flux régulier ou un besoin urgent ? Notre équipe vous répond rapidement 
+          avec une proposition adaptée à vos contraintes terrain.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE + COORDONNÉES -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 3rem;">
+        <!-- FORMULAIRE -->
+        <div class="card">
+          <h2 style="margin-top: 0;">Demande de devis</h2>
+          <p class="text-muted">
+            Pour vous envoyer une proposition précise, indiquez le maximum d'éléments. 
+            Si vous n'avez pas toutes les informations, envoyez ce que vous avez : nous complèterons par téléphone.
+          </p>
+          
+          <form class="mt-4" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="entreprise">Entreprise *</label>
+                <input type="text" id="entreprise" name="entreprise" class="form-control" placeholder="Nom de votre société" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="fonction">Fonction</label>
+                <input type="text" id="fonction" name="fonction" class="form-control" placeholder="Achats, Exploitation, Conducteur...">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="nom">Nom & Prénom *</label>
+                <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom complet" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="ville">Ville / Site</label>
+                <input type="text" id="ville" name="ville" class="form-control" placeholder="Fès, Casablanca, autre...">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="tel">Téléphone *</label>
+                <input type="tel" id="tel" name="tel" class="form-control" placeholder="+212..." required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="nom@entreprise.ma" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="prestation">Type de prestation *</label>
+                <select id="prestation" name="prestation" class="form-control" required>
+                  <option value="">Sélectionner...</option>
+                  <option>Transport de marchandises</option>
+                  <option>Fourniture & transport d'agrégats</option>
+                  <option>Transport des enrobés</option>
+                  <option>Terrassement</option>
+                  <option>Location d'engins</option>
+                  <option>Négoce de matériaux</option>
+                  <option>Travaux divers BTP</option>
+                  <option>Autre (à préciser)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="periode">Période de démarrage</label>
+                <input type="text" id="periode" name="periode" class="form-control" placeholder="Date + durée estimée">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="volume">Volumes / rotations</label>
+                <input type="text" id="volume" name="volume" class="form-control" placeholder="ex. 800 t/semaine, 15 rotations/jour...">
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="frequence">Fréquence</label>
+                <input type="text" id="frequence" name="frequence" class="form-control" placeholder="Ponctuel / Quotidien / Hebdo">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="message">Détails & contraintes d'accès</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Points de chargement/déchargement, horaires, accès chantier, contraintes QHSE..."></textarea>
+            </div>
+            
+            <p class="form-small text-muted">
+              En envoyant ce formulaire, vous acceptez d'être contacté(e) par INVEST PRODUCTION pour traiter votre demande. 
+              Vos informations restent confidentielles.
+            </p>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Envoyer ma demande de devis
+            </button>
+            
+            <div id="formMessage" class="mt-3" style="display: none;"></div>
+          </form>
+        </div>
+        
+        <!-- COORDONNÉES -->
+        <div>
+          <div class="card mb-3">
+            <h3 style="margin-top: 0;">📞 Contact direct</h3>
+            <p class="text-muted">
+              Vous préférez échanger directement ? Nos équipes sont à votre écoute.
+            </p>
+            
+            <div style="margin-top: 1.5rem; display: grid; gap: 1rem;">
+              <div>
+                <div class="text-sm text-muted">Téléphone</div>
+                <div class="font-semibold">
+                  <a href="tel:+212522249715" style="color: var(--text-light);">05 22 24 97 15</a> / 
+                  <a href="tel:+212610731100" style="color: var(--text-light);">06 10 73 11 00</a>
+                </div>
+              </div>
+              
+              <div>
+                <div class="text-sm text-muted">Email</div>
+                <div class="font-semibold">
+                  <a href="mailto:investproduction2017@gmail.com" style="color: var(--text-light);">investproduction2017@gmail.com</a>
+                </div>
+              </div>
+              
+              <div>
+                <div class="text-sm text-muted">Disponibilité</div>
+                <div class="font-semibold">24h/24 – 7j/7 toute l'année</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card mb-3">
+            <h3 style="margin-top: 0;">🏢 Siège Social — Fès</h3>
+            <p class="text-muted" style="margin-bottom: 0;">
+              <strong>Adresse :</strong><br>
+              Magasin 4, Lot 62, Berdellah 2<br>
+              Ain Smen – Fès
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 style="margin-top: 0;">🏢 Bureau opérationnel — Casablanca</h3>
+            <p class="text-muted" style="margin-bottom: 0;">
+              <strong>Adresse :</strong><br>
+              J1 Office Center<br>
+              Angle Bd My Ismail et Bd Mohammed Ben Mekki<br>
+              Étage 5, Bureau n°506<br>
+              Ain Sebaa, Casablanca
+            </p>
+          </div>
+          
+          <div class="card mt-3" style="background: linear-gradient(135deg, rgba(123,63,242,0.1) 0%, rgba(233,30,140,0.05) 100%);">
+            <h4 style="margin-top: 0;">💡 Astuce</h4>
+            <p class="text-muted" style="margin-bottom: 0; font-size: 0.9375rem;">
+              Pour accélérer votre devis, indiquez les points de chargement/déchargement, le volume, 
+              la fréquence et la date de démarrage dans votre message.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSUS -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <div class="section-label" style="justify-content: center;">
+          <span class="section-number">.01</span>
+          <span>Comment ça se passe</span>
+        </div>
+        <h2>Processus <span class="text-gradient">après votre demande</span></h2>
+      </div>
+      
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="text-gradient font-bold text-xl">01</div>
+          <h3 class="card-title">Réception & analyse</h3>
+          <p class="card-text">
+            Analyse de votre besoin (volumes, planning, contraintes d'accès).
+          </p>
+        </div>
+        
+        <div class="card">
+          <div class="text-gradient font-bold text-xl">02</div>
+          <h3 class="card-title">Clarification rapide</h3>
+          <p class="card-text">
+            Appel court exploitation si nécessaire pour compléter les informations.
+          </p>
+        </div>
+        
+        <div class="card">
+          <div class="text-gradient font-bold text-xl">03</div>
+          <h3 class="card-title">Proposition chiffrée</h3>
+          <p class="card-text">
+            Devis + organisation recommandée (cadence, moyens, délais).
+          </p>
+        </div>
+        
+        <div class="card">
+          <div class="text-gradient font-bold text-xl">04</div>
+          <h3 class="card-title">Démarrage</h3>
+          <p class="card-text">
+            Mise en œuvre selon planning et coordination avec vos équipes chantier.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ RAPIDE -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Questions <span class="text-gradient">fréquentes</span></h2>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Quel est votre délai de réponse ?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Nous visons une réponse rapide. Le délai dépend du niveau de détail transmis et de la complexité 
+              (volumes, multi-sites, contraintes spécifiques).
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Intervenez-vous uniquement à Fès et Casablanca ?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Nos implantations sont à Fès et Casablanca, mais nous pouvons intervenir selon le besoin et le planning 
+              sur d'autres zones au Maroc (à préciser dans votre demande).
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Pouvez-vous gérer des volumes importants et des rotations quotidiennes ?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Oui. Notre flotte et notre organisation (exploitation, chefs de parc, chauffeurs) sont conçues 
+              pour assurer des rotations régulières et maintenir la continuité sur chantier.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>INVEST PRODUCTION S.A.R.L</h3>
+          <p>
+            Leader en transport routier, logistique et BTP au Maroc. 
+            Créée en 2017, nous accompagnons les grands projets industriels et de construction 
+            avec fiabilité, réactivité et expertise terrain.
+          </p>
+          <p><strong>Capital :</strong> 5 000 000 DHS</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="moyens-equipes.html">Moyens & Équipes</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>
+            <strong>Siège Fès :</strong><br>
+            Magasin 4, Lot 62, Berdellah 2<br>
+            Ain Smen – Fès
+          </p>
+          <p>
+            <strong>Bureau Casablanca :</strong><br>
+            J1 Office Center, Étage 5, Bureau n°506<br>
+            Ain Sebaa, Casablanca
+          </p>
+          <p>
+            <strong>Tél :</strong> 05 22 24 97 15 / 06 10 73 11 00<br>
+            <strong>Email :</strong> investproduction2017@gmail.com
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>© 2024 INVEST PRODUCTION S.A.R.L. Tous droits réservés.</div>
+        <div>Disponibilité 24h/24 – 7j/7 | Fès & Casablanca</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    });
+    
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileToggle.textContent = '☰';
+      });
+    });
+    
+    // FAQ accordion
+    const faqButtons = document.querySelectorAll('.faq-question');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+    
+    // Form submission (demo - à adapter avec votre backend)
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Simulation d'envoi
+      formMessage.style.display = 'block';
+      formMessage.style.padding = '1rem';
+      formMessage.style.borderRadius = '12px';
+      formMessage.style.background = 'rgba(19, 194, 163, 0.15)';
+      formMessage.style.border = '1px solid rgba(19, 194, 163, 0.4)';
+      formMessage.style.color = '#13c2a3';
+      formMessage.textContent = '✓ Votre demande a été envoyée avec succès ! Nous vous répondons rapidement.';
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Hide message after 5s
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Logo NGE simplifié -->
+  <rect x="5" y="15" width="8" height="30" fill="#005BAA"/>
+  <rect x="15" y="15" width="8" height="30" fill="#84BD00"/>
+  <rect x="25" y="15" width="8" height="30" fill="#F39200"/>
+  <text x="40" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#005BAA">
+    NGE
+  </text>
+</svg>

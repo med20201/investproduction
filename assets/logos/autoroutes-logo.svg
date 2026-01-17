@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Logo Autoroutes du Maroc / ADM simplifié -->
+  <path d="M 10 30 Q 30 10, 50 30 Q 70 50, 90 30" stroke="#00843D" stroke-width="6" fill="none"/>
+  <text x="95" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00843D">
+    ADM
+  </text>
+</svg>

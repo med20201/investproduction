@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Logo Lafarge simplifié -->
+  <rect x="5" y="15" width="30" height="30" fill="#E2001A" rx="3"/>
+  <text x="40" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#E2001A">
+    Lafarge
+  </text>
+</svg>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan du site | INVEST PRODUCTION S.A.R.L</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #7B3FF2 0%, #E91E8C 100%);
+      min-height: 100vh;
+      padding: 3rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #7B3FF2 0%, #E91E8C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+      border-left: 4px solid #7B3FF2;
+      padding-left: 1rem;
+    }
+    .page-list {
+      display: grid;
+      gap: 1rem;
+    }
+    .page-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .page-item:hover {
+      background: #f1f3f5;
+      border-color: #7B3FF2;
+      transform: translateX(8px);
+    }
+    .page-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .page-icon {
+      font-size: 1.5rem;
+    }
+    .page-title {
+      font-weight: 600;
+      color: #333;
+      font-size: 1.125rem;
+    }
+    .page-desc {
+      color: #666;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #7B3FF2 0%, #E91E8C 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .status {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .status-done {
+      background: #d3f9d8;
+      color: #2b8a3e;
+    }
+    .status-pending {
+      background: #fff3bf;
+      color: #e67700;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(123,63,242,0.1) 0%, rgba(233,30,140,0.1) 100%);
+      border-radius: 12px;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #7B3FF2 0%, #E91E8C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      color: #666;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="assets/logo.svg" alt="INVEST PRODUCTION S.A.R.L" style="height: 100px; width: auto; margin-bottom: 1rem;">
+    </div>
+    <h1>🚛 Plan du site</h1>
+    <p class="subtitle">INVEST PRODUCTION S.A.R.L — Transport routier & Logistique BTP au Maroc</p>
+    
+    <div class="section">
+      <h2>📄 Pages principales</h2>
+      <div class="page-list">
+        <a href="index.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">🏠</span>
+            <div>
+              <div class="page-title">Accueil</div>
+              <div class="page-desc">Hero, services, chiffres clés, références clients</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+        
+        <a href="a-propos.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">ℹ️</span>
+            <div>
+              <div class="page-title">À propos</div>
+              <div class="page-desc">Mission, vision, valeurs, organisation, implantations</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+        
+        <a href="services.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">🔧</span>
+            <div>
+              <div class="page-title">Services</div>
+              <div class="page-desc">Hub services : transport, agrégats, enrobés, terrassement...</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+        
+        <a href="moyens-equipes.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">🚚</span>
+            <div>
+              <div class="page-title">Moyens & Équipes</div>
+              <div class="page-desc">Flotte 40T, parc travaux, organisation 24/7</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+        
+        <a href="references.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">🏆</span>
+            <div>
+              <div class="page-title">Références</div>
+              <div class="page-desc">HOLCIM, LAFARGE, NGE, GCR, SOTRAVO...</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+        
+        <a href="contact.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">📧</span>
+            <div>
+              <div class="page-title">Contact & Devis</div>
+              <div class="page-desc">Formulaire B2B, coordonnées Fès & Casablanca, FAQ</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+        
+        <a href="mentions-legales.html" class="page-item">
+          <div class="page-info">
+            <span class="page-icon">📋</span>
+            <div>
+              <div class="page-title">Mentions légales</div>
+              <div class="page-desc">Informations juridiques, RGPD, contact</div>
+            </div>
+          </div>
+          <span class="status status-done">✓ Complète</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>🚧 Sous-pages services (à créer)</h2>
+      <div class="page-list">
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">📦</span>
+            <div>
+              <div class="page-title">Transport de marchandises</div>
+              <div class="page-desc">services/transport-marchandises.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+        
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">🏔️</span>
+            <div>
+              <div class="page-title">Transport d'agrégats</div>
+              <div class="page-desc">services/transport-agregats.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+        
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">🛣️</span>
+            <div>
+              <div class="page-title">Transport des enrobés</div>
+              <div class="page-desc">services/transport-enrobes.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+        
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">⚒️</span>
+            <div>
+              <div class="page-title">Terrassement</div>
+              <div class="page-desc">services/terrassement.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+        
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">🚜</span>
+            <div>
+              <div class="page-title">Location d'engins</div>
+              <div class="page-desc">services/location-engins.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+        
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">🧱</span>
+            <div>
+              <div class="page-title">Négoce de matériaux</div>
+              <div class="page-desc">services/negoce-materiaux.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+        
+        <div class="page-item" style="opacity: 0.6; cursor: default;">
+          <div class="page-info">
+            <span class="page-icon">🏗️</span>
+            <div>
+              <div class="page-title">Travaux divers BTP</div>
+              <div class="page-desc">services/travaux-divers-btp.html</div>
+            </div>
+          </div>
+          <span class="status status-pending">À créer</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>📊 Statistiques du projet</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Pages complètes</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1</div>
+          <div class="stat-label">CSS partagé</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Dépendances</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Responsive</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Erreur console</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">SEO</div>
+          <div class="stat-label">Optimisé</div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e9ecef;">
+      <a href="index.html" class="btn">🚀 Découvrir le site</a>
+      <p style="margin-top: 1rem; color: #666; font-size: 0.875rem;">
+        INVEST PRODUCTION S.A.R.L — Créée en 2017 | Capital 5 000 000 DHS
+      </p>
+    </div>
+  </div>
+</body>
+</html>
